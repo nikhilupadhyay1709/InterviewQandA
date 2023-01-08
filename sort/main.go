@@ -21,5 +21,5 @@ func main() {
 		}
 	}
 
-	fmt.Println("Sorted Array is:", n)
+	fmt.Println("Sorted Array is 🚀:", n)
 }

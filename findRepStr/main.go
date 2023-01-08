@@ -11,5 +11,5 @@ func main() {
 	fmt.Println("Full String:", str)
 
 	count := strings.Count(str, "i")
-	fmt.Println("The count of i is:", count)
+	fmt.Println("The count of i is 🚀:", count)
 }

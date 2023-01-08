@@ -6,7 +6,7 @@ func main() {
 	str := "NITIN"
 	str = "Nikhil"
 
-	fmt.Println(IsPalindrome(str))
+	fmt.Println("Is Palindrome 🚀:", IsPalindrome(str))
 
 }
 

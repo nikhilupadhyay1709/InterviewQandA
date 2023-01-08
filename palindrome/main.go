@@ -20,5 +20,5 @@ func isPalindrome(x int) bool {
 }
 
 func main() {
-	fmt.Println("SecondFunction:", isPalindrome(121))
+	fmt.Println("Is Number Palindrome 🚀:", isPalindrome(121))
 }

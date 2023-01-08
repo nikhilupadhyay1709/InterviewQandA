@@ -15,8 +15,8 @@ func reverseString(str string) (res string) {
 func main() {
 	str := "Nikhil"
 
-	fmt.Println("Original String:", str)
+	fmt.Println("Original String 🚀:", str)
 	// invoke reverseString
-	fmt.Println("Reverse String:", reverseString(str))
+	fmt.Println("Reverse String 🚀:", reverseString(str))
 
 }

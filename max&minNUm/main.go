@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("FindOut Max Number:", max(7, 10))
-	fmt.Println("FindOut Min Number:", min(7, 10))
+	fmt.Println("Max Number 🚀:", max(7, 10))
+	fmt.Println("Min Number 🚀:", min(7, 10))
 
 }
 

@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	arr := []int{2, 3, 5, 7, 11, 13}
-	fmt.Println(findMaxElement(arr))
+	fmt.Println("Maximum Number In Array🚀:", findMaxElement(arr))
 }
 
 func findMaxElement(arr []int) int {

@@ -26,6 +26,6 @@ func main() {
 	var N = len(arr)
 
 	res := missingElementsFromArray(arr, N)
-	fmt.Println("The missing numbers are:", res)
+	fmt.Println("Missing Numbers Are 🚀:", res)
 
 }
