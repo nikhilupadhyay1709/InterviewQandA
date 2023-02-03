@@ -5,12 +5,14 @@ import (
 )
 
 func unique(intSlice []int) []int {
-	keys := make(map[int]bool)
+	m := make(map[int]bool)
+	
 	list := []int{}
-	for _, entry := range intSlice {
-		if _, value := keys[entry]; !value {
-			keys[entry] = true
-			list = append(list, entry)
+	
+	for _, v := range intSlice {
+		if _, ok := m[v]; !ok {
+			m[v] = true
+			list = append(list, v)
 		}
 	}
 	return list
