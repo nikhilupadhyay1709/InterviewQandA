@@ -11,14 +11,14 @@ func main() {
 }
 
 func FirstNonRepeatingCharacter(str string) int {
-	charCounts := map[string]int{}
+	m := map[string]int{}
 
 	for _, v := range str {
-		charCounts[string(v)] += 1
+		m[string(v)] += 1
 	}
 
 	for i, v := range str {
-		if charCounts[string(v)] == 1 {
+		if m[string(v)] == 1 {
 			return i
 		}
 	}

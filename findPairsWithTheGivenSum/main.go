@@ -12,7 +12,6 @@ func findSumPair(arr []int, sum int) {
 			return
 		}
 	}
-	fmt.Println("Pair not found in given array.")
 }
 
 func main() {

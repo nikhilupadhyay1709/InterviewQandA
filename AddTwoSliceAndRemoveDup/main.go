@@ -6,14 +6,14 @@ import (
 
 func appendCategory(a []string, b []string) []string {
 
-	check := make(map[string]int)
+	m := make(map[string]int)
 	d := append(a, b...)
 	res := make([]string, 0)
 	for _, v := range d {
-		check[v] = 1
+		m[v] = 1
 	}
 
-	for l := range check {
+	for l := range m {
 		res = append(res, l)
 	}
 
