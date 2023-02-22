@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func findSumPair(arr []int, sum int) {
-	mapping := make(map[int]int)
+	m := make(map[int]int)
 	for i := 0; i < len(arr); i++ {
-		if mapping[sum-arr[i]] == 0 {
-			mapping[arr[i]] = i
+		if m[sum-arr[i]] == 0 {
+			m[arr[i]] = i
 		} else {
-			fmt.Printf("Pair for given sum is (%d, %d).\n", arr[mapping[sum-arr[i]]], arr[i])
+			fmt.Printf("Pair for given sum is (%d, %d).\n", arr[m[sum-arr[i]]], arr[i])
 			return
 		}
 	}
