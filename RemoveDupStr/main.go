@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func unique(s []string) []string {
+func removeDup(str []string) []string {
 	m := make(map[string]bool)
 	var res []string
-	for _, v := range s {
+	for _, v := range str {
 		if _, ok := m[v]; !ok {
 			m[v] = true
 			res = append(res, v)
@@ -15,5 +15,7 @@ func unique(s []string) []string {
 }
 
 func main() {
-	fmt.Println(unique([]string{"abc", "cde", "efg", "efg", "abc", "cde"}))
+	strArr := []string{"abc", "cde", "efg", "efg", "abc", "cde"}
+	res := removeDup(strArr)
+	fmt.Println("AfterRemovingDuplicates :", res)
 }

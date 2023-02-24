@@ -4,12 +4,12 @@ import (
 	"fmt"
 )
 
-func unique(intSlice []int) []int {
+func removeDup(arr []int) []int {
 	m := make(map[int]bool)
-	
+
 	list := []int{}
-	
-	for _, v := range intSlice {
+
+	for _, v := range arr {
 		if _, ok := m[v]; !ok {
 			m[v] = true
 			list = append(list, v)
@@ -19,8 +19,8 @@ func unique(intSlice []int) []int {
 }
 
 func main() {
-	intSlice := []int{1, 5, 3, 6, 9, 9, 4, 2, 3, 1, 5}
-	fmt.Println(intSlice)
-	uniqueSlice := unique(intSlice)
-	fmt.Println(uniqueSlice)
+	arr := []int{1, 5, 3, 6, 9, 9, 4, 2, 3, 1, 5}
+	fmt.Println("BeforeRemovingDuplicates :", arr)
+	res := removeDup(arr)
+	fmt.Println("AfterRemovingDuplicates :", res)
 }
