@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func findSumPair(arr []int, sum int) {
+	
 	m := make(map[int]int)
+
 	for i := 0; i < len(arr); i++ {
 		if m[sum-arr[i]] == 0 {
 			m[arr[i]] = i

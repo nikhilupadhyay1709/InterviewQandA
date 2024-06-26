@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Upadhyay - Software Development Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6em;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            border-bottom: #77d8d8 3px solid;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        header a:hover {
+            color: #77d8d8;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #showcase {
+            min-height: 400px;
+            background: #333 url('showcase.jpg') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+            padding-top: 100px;
+            margin-top: 60px;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #showcase h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .button_1 {
+            height: 38px;
+            background: #e8491d;
+            border: none;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button_1:hover {
+            background: #d7381a;
+        }
+        #main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        #main h1, #main h2, #main h3 {
+            margin-bottom: 20px;
+        }
+        #main p {
+            line-height: 1.6em;
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+        }
+        footer a {
+            color: #77d8d8;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-links {
+            margin: 10px 0;
+        }
+        .section-title {
+            color: #e8491d;
+            border-bottom: 2px solid #e8491d;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            header nav {
+                float: none;
+                text-align: center;
+            }
+            header li {
+                display: block;
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Nikhil Upadhyay</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Welcome to My Personal Webpage</h1>
+            <p>Software Development Engineer | Golang Enthusiast</p>
+            <a href="#contact" class="button_1">Contact Me</a>
+        </div>
+    </section>
+
+    <div class="container" id="main">
+        <section id="about">
+            <h1 class="section-title">About Me</h1>
+            <div class="card">
+                <p>I am a seasoned software engineer with strong Golang skills, proficient in creating, implementing, and maintaining software solutions with a strong focus on problem-solving and collaboration. I am devoted to offering scalable, superior products and staying abreast of innovations.</p>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h1 class="section-title">Resume</h1>
+            <h2>Professional Summary</h2>
+            <div class="card">
+                <p>Software Development Engineer with extensive experience in developing scalable and robust software solutions. Adept at using a variety of technologies including Golang, Kubernetes, Docker, and more. Strong focus on problem-solving, collaboration, and continuous learning.</p>
+            </div>
+
+            <h2>Education</h2>
+            <div class="card">
+                <p><strong>VBSPU, Jaunpur</strong> — B.COM,  Aug 2017 - Aug 2020</p>
+                <p><strong>HSC, Jaunpur</strong> — 12th,  July 2015 - June 2017</p>
+                <p><strong>SSC, Jaunpur</strong> — 10th,  July 2014 - June 2015</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h1 class="section-title">Experience</h1>
+            <div class="card">
+                <h3>Coredge.io, Noida — SDE</h3>
+                <p><strong>May 2023 - Dec 2023</strong></p>
+                <p>Writing clear, effective code as well as analyzing and debugging complicated problems were all part of my job description. In order to guarantee scalability, dependability, and security, I actively participated and contributed in the design and architecture of software systems.</p>
+            </div>
+            <div class="card">
+                <h3>QuEST Global, Pune — GET</h3>
+                <p><strong>Nov 2021 - May 2023</strong></p>
+                <p>My responsibilities include making the most of training sessions and on-the-job experiences to maximize my learning and development, assist senior engineers with project tasks, troubleshoot and resolve issues, offer project assistance, manage technical documentation, and guarantee quality assurance.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1 class="section-title">Projects</h1>
+            <div class="card">
+                <h3>Cloud Orbiter - JUN 2024 - PRESENT</h3>
+                <p>Centralized Control for Hybrid and Multi-Cloud Deployment" Cloud Orbiter is a centralized universal application control plane designed for hybrid and multi-cloud environments. It simplifies infrastructure management and accelerates application deployment across cloud, on-premises, and edge locations.</p>
+                <ul>
+                    <li>Unified control over storage, virtual machines, and Kubernetes clusters through an easy-to-use dashboard.</li>
+                    <li>Automated deployment of applications in various locations.</li>
+                    <li>Enterprise-grade security featuring centralized IAM/RBAC, monitoring, observability, vulnerability scanning, and auth-N services.</li>
+                    <li>Multi-cloud support for Kubernetes clusters (AWS, Azure, etc.).</li>
+                    <li>Platform that can be customized to meet unique organizational requirements.</li>
+                    <li>Enhanced efficiency for DevOps teams, infrastructure admins, and IT operations adherence to zero-trust security guidelines and industry standards.</li>
+                </ul>
+            </div>
+            <div class="card project">
+                <h3>Dflare - MAY 2023 - Dec 2023</h3>
+                <p>The Dflare DaaS Platform is a cloud-based solution designed to cater to the specific needs of developers. This platform offers a seamless development environment where all essential applications are pre-installed and configured, allowing developers to concentrate solely on their coding tasks. Dflare takes care of the intricacies of environment management, freeing developers from administrative burdens and providing a scalable, secure, and user-friendly workspace that's meticulously tuned for optimal development productivity.</p>
+            </div>
+            <div class="card project">
+                <h3>Argon_thinclient - NOV 2021 - MAY 2023</h3>
+                <p>Argon is a device and software configuration management service. In the cloud client world, device management and ease of remote configuration and control of devices and operating environments are considered necessary features and table stakes to compete and succeed within this market. Nearly all cloud client customers today depend on an on-premise configuration management solution.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h1 class="section-title">Skills</h1>
+            <div class="card">
+                <table>
+                    <tr>
+                        <th>Technical Skills</th>
+                        <th>Tools and Technologies</th>
+                    </tr>
+                    <tr>
+                        <td>Golang</td>
+                        <td>Kubernetes</td>
+                    </tr>
+                    <tr>
+                        <td>GORM</td>
+                        <td>Docker</td>
+                    </tr>
+                    <tr>
+                        <td>Gin</td>
+                        <td>Prometheus</td>
+                    </tr>
+                    <tr>
+                        <td>RestAPI</td>
+                        <td>Grafana</td>
+                    </tr>
+                    <tr>
+                        <td>Unit-test Cases</td>
+                        <td>Keycloak</td>
+                    </tr>
+                    <tr>
+                        <td>MongoDB</td>
+                        <td>MySQL</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1 class="section-title">Contact</h1>
+            <div class="card">
+                <ul class="contact-info">
+                    <li>Email: <a href="mailto:nikhilupadhyay1709@gmail.com">nikhilupadhyay1709@gmail.com</a></li>
+                    <li>Phone: 7985730314</li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/nikhil-upadhyay-188ab120a">linkedin.com/in/nikhil-upadhyay-188ab120a</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Nikhil Upadhyay &copy; 2024</p>
+    </footer>
+</body>
+</html>

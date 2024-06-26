@@ -2,9 +2,14 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func missingElementsFromArray(arr []int, N int) []int {
+
+	// sort the array
+	sort.Ints(arr)
+
 	result := []int{}
 	var diff = arr[0] - 0
 

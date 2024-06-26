@@ -5,11 +5,6 @@ import "fmt"
 func main() {
 	input := []string{"ale", "ape", "april"}
 
-	if len(input) == 0 {
-		fmt.Println("")
-		return
-	}
-
 	prefix := input[0]
 
 	for i := 1; i < len(input); i++ {

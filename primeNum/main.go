@@ -2,28 +2,25 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
-func checkPrimeNumber(num int) {
-	if num < 2 {
-		fmt.Println("Number must be greater than 2.")
-		return
+func isPrime(n int) bool {
+	if n <= 1 {
+		return false
 	}
-	sq_root := int(math.Sqrt(float64(num)))
-	for i := 2; i <= sq_root; i++ {
-		if num%i == 0 {
-			fmt.Println("Non Prime Number")
-			return
+	for i := 2; i*i <= n; i++ {
+		if n%i == 0 {
+			return false
 		}
 	}
-	fmt.Println("Prime Number")
-	return
+	return true
 }
 
 func main() {
-	checkPrimeNumber(0)
-	checkPrimeNumber(2)
-	checkPrimeNumber(13)
-	checkPrimeNumber(152)
+	number := 14
+	if isPrime(number) {
+		fmt.Printf("%d is a prime number.\n", number)
+	} else {
+		fmt.Printf("%d is not a prime number.\n", number)
+	}
 }

@@ -25,5 +25,5 @@ func main() {
 	b := []string{"x", "p", "q"}
 	c := appendCategory(a, b)
 	fmt.Println(c)
-
+ 
 }

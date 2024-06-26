@@ -10,7 +10,8 @@ func removeDup(arr []int) []int {
 	list := []int{}
 
 	for _, v := range arr {
-		if _, ok := m[v]; !ok {
+		if _, ok := m[v] 
+		!ok {
 			m[v] = true
 			list = append(list, v)
 		}
