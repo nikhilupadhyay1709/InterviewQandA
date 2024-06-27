@@ -5,18 +5,21 @@ import (
 )
 
 func removeDup(arr []int) []int {
+
 	m := make(map[int]bool)
 
-	list := []int{}
+	res := []int{}
 
 	for _, v := range arr {
-		if _, ok := m[v] 
-		!ok {
+
+		ok := m[v]
+
+		if !ok {
 			m[v] = true
-			list = append(list, v)
+			res = append(res, v)
 		}
 	}
-	return list
+	return res
 }
 
 func main() {
