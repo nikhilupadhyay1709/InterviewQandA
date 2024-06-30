@@ -1,19 +1,16 @@
 package main
 
-import "fmt"
-
-func reverseArray(arr []int) {
-	length := len(arr)
-
-	for i := 0; i < length/2; i++ {
-		arr[i], arr[length-1-i] = arr[length-1-i], arr[i]
-	}
-}
+import (
+	"fmt"
+)
 
 func main() {
 	arr := []int{1, 2, 3, 4, 5}
-	fmt.Println("Original array:", arr)
-	reverseArray(arr)
+	l := len(arr)
 
-	fmt.Println("Reversed array:", arr)
+	for i := 0; i < l/2; i++ {
+		arr[i], arr[l-1-i] = arr[l-1-i], arr[i]
+	}
+
+	fmt.Println(arr)
 }
