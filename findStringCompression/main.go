@@ -5,7 +5,8 @@ import (
 	"strconv"
 )
 
-func compressString(s string) string {
+func main() {
+	s := "aabcccccaaa"
 	n := len(s)
 
 	var compressed string
@@ -21,13 +22,8 @@ func compressString(s string) string {
 	}
 
 	if len(compressed) >= n {
-		return s
+		fmt.Println(s)
+	} else {
+		fmt.Println(compressed)
 	}
-	return compressed
-}
-
-func main() {
-	testString := "aabcccccaaa"
-	result := compressString(testString)
-	fmt.Println(result)
 }
