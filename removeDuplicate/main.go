@@ -24,7 +24,8 @@ func removeDup(arr []int) []int {
 
 func main() {
 	arr := []int{1, 5, 3, 6, 9, 9, 4, 2, 3, 1, 5}
-	fmt.Println("BeforeRemovingDuplicates :", arr)
+
 	res := removeDup(arr)
+	
 	fmt.Println("AfterRemovingDuplicates :", res)
 }
