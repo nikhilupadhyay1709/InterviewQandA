@@ -9,14 +9,14 @@ func main() {
 	findPairSum(arr, 10)
 }
 
-func findPairSum(arr []int, sum int) {
+func findPairSum(arr []int, n int) {
 	m := make(map[int]bool)
 
-	for _, value := range arr {
-		complement := sum - value
-		if m[complement] {
-			fmt.Println("Given Pair:", complement, value)
+	for _, v := range arr {
+		com := n - v
+		if m[com] {
+			fmt.Println("Given Pair:", com, v)
 		}
-		m[value] = true
+		m[v] = true
 	}
 }
