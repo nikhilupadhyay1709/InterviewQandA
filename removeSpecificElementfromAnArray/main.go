@@ -4,15 +4,15 @@ import "fmt"
 
 func removeElement(arr []int, e int) []int {
 
-	var result []int
+	var res []int
 
 	for _, value := range arr {
 		if value != e {
-			result = append(result, value)
+			res = append(res, value)
 		}
 	}
 
-	return result
+	return res
 }
 
 func main() {
