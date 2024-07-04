@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func removeElement(arr []int, element int) []int {
+func removeElement(arr []int, e int) []int {
 
 	var result []int
 
 	for _, value := range arr {
-		if value != element {
+		if value != e {
 			result = append(result, value)
 		}
 	}
@@ -19,7 +19,7 @@ func main() {
 
 	arr := []int{1, 2, 3, 4, 5}
 
-	element := 3
+	e := 3
 
-	fmt.Println("Array after removing", element, ":", removeElement(arr, element))
+	fmt.Println("Array after removing", e, ":", removeElement(arr, e))
 }
