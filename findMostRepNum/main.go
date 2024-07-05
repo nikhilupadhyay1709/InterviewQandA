@@ -14,13 +14,13 @@ func main() {
 	}
 
 	// Find the most repeated number
-	mostRepeated, maxCount := 0, 0
+	mostRep, maxCount := 0, 0
 	for num, count := range m {
 		if count > maxCount {
 			maxCount = count
-			mostRepeated = num
+			mostRep = num
 		}
 	}
 
-	fmt.Println("Most repeated Number is 🚀:", mostRepeated, "Count of 🚀:", maxCount)
+	fmt.Println("Most repeated Number is 🚀:", mostRep, "Count of 🚀:", maxCount)
 }
