@@ -15,31 +15,28 @@ func findLongestConsecutiveSequence(arr []int) ([]int, int) {
 	}
 
 	longestStreak := 0
-	startOfLongest := 0
+	var longestSequence []int
 
 	for _, num := range arr {
 		if !numMap[num-1] {
 			currentNum := num
 			currentStreak := 1
+			currentSequence := []int{currentNum}
 
 			for numMap[currentNum+1] {
 				currentNum++
 				currentStreak++
+				currentSequence = append(currentSequence, currentNum)
 			}
 
 			if currentStreak > longestStreak {
 				longestStreak = currentStreak
-				startOfLongest = num
+				longestSequence = currentSequence
 			}
 		}
 	}
 
-	longestSequence := make([]int, longestStreak)
-	for i := 0; i < longestStreak; i++ {
-		longestSequence[i] = startOfLongest + i
-	}
-
-	return longestSequence, startOfLongest + longestStreak - 1
+	return longestSequence, longestSequence[len(longestSequence)-1]
 }
 
 func main() {
