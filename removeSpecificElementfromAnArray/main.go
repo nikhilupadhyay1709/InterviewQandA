@@ -6,9 +6,9 @@ func removeElement(arr []int, e int) []int {
 
 	var res []int
 
-	for _, value := range arr {
-		if value != e {
-			res = append(res, value)
+	for _, v := range arr {
+		if v != e {
+			res = append(res, v)
 		}
 	}
 
@@ -18,8 +18,5 @@ func removeElement(arr []int, e int) []int {
 func main() {
 
 	arr := []int{1, 2, 3, 4, 5}
-
-	e := 3
-
-	fmt.Println("Array after removing", e, ":", removeElement(arr, e))
+	fmt.Println("Array after removing :", removeElement(arr, 3))
 }
