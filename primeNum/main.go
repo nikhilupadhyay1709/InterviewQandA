@@ -4,23 +4,21 @@ import (
 	"fmt"
 )
 
-func isPrime(n int) bool {
+func main() {
+	n := 29
+	checkPrime(n)
+}
+
+func checkPrime(n int) {
 	if n <= 1 {
-		return false
+		fmt.Println(n, "is not a prime number")
+		return
 	}
 	for i := 2; i*i <= n; i++ {
 		if n%i == 0 {
-			return false
+			fmt.Println(n, "is not a prime number")
+			return
 		}
 	}
-	return true
-}
-
-func main() {
-	number := 14
-	if isPrime(number) {
-		fmt.Printf("%d is a prime number.\n", number)
-	} else {
-		fmt.Printf("%d is not a prime number.\n", number)
-	}
+	fmt.Println(n, "is a prime number")
 }

@@ -1,0 +1,1 @@
+nmcli device wifi connect "nikhil" password "314@admin"

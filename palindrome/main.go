@@ -5,8 +5,8 @@ import (
 	"strconv"
 )
 
-func isPalindrome(number int) bool {
-	str := strconv.Itoa(number)
+func isPalindrome(n int) bool {
+	str := strconv.Itoa(n)
 
 	l := len(str)
 

@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type Speaker interface {
 	Speak() string
@@ -15,22 +13,12 @@ type Dog struct {
 func (d Dog) Speak() string {
 	return "Woof!"
 }
-
-type Cat struct {
-	Name string
-}
-
-func (c Cat) Speak() string {
-	return "Meow!"
+func speak(s Speaker) {
+	fmt.Println(s.Speak())
 }
 
 func main() {
 	dog := Dog{Name: "Buddy"}
-	cat := Cat{Name: "Whiskers"}
 
-	animals := []Speaker{dog, cat}
-
-	for _, animal := range animals {
-		fmt.Println(animal.Speak())
-	}
+	speak(dog)
 }

@@ -12,8 +12,8 @@ func main() {
 	m := l / 2
 
 	if l%2 != 0 {
-		fmt.Printf("%d\n", arr[m])
+		fmt.Println(arr[m])
 	} else {
-		fmt.Printf("%d and %d\n", arr[m-1], arr[m])
+		fmt.Println(arr[m-1], arr[m])
 	}
 }

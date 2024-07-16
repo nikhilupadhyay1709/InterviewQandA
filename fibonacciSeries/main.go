@@ -5,10 +5,10 @@ package main
 import "fmt"
 
 func main() {
-	var n int = 12
+	n := 12
 	t1 := 0
 	t2 := 1
-	nextTerm := 0
+	tn := 0
 
 	for i := 1; i <= n; i++ {
 		if i == 1 {
@@ -19,9 +19,9 @@ func main() {
 			fmt.Print(" ", t2)
 			continue
 		}
-		nextTerm = t1 + t2
+		tn = t1 + t2
 		t1 = t2
-		t2 = nextTerm
-		fmt.Print(" ", nextTerm)
+		t2 = tn
+		fmt.Print(" ", tn)
 	}
 }

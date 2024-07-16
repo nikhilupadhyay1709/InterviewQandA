@@ -9,14 +9,14 @@ func main() {
 	b := 25
 	c := 9
 
-	largest := a
+	l := a
 
-	if b > largest {
-		largest = b
+	if b > l {
+		l = b
 	}
-	if c > largest {
-		largest = c
+	if c > l {
+		l = c
 	}
 
-	fmt.Print(largest)
+	fmt.Print(l)
 }
