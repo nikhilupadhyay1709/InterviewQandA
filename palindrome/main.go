@@ -1,24 +1,30 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
-func isPalindrome(x int) bool {
-	sum := 0
-	compare := x
+func isPalindrome(number int) bool {
+	str := strconv.Itoa(number)
 
-	for x > 0 {
-		r := x % 10
-		sum = (sum * 10) + r
-		x = x / 10
+	l := len(str)
+
+	// Compare the string with its reverse
+	for i := 0; i < l/2; i++ {
+		if str[i] != str[l-1-i] {
+			return false
+		}
 	}
-
-	if compare == sum {
-		return true
-	}
-	return false
-
+	return true
 }
 
 func main() {
-	fmt.Println("Is Number Palindrome 🚀:", isPalindrome(121))
+	number := 121
+
+	if isPalindrome(number) {
+		fmt.Printf("%d is a palindrome\n", number)
+	} else {
+		fmt.Printf("%d is not a palindrome\n", number)
+	}
 }
