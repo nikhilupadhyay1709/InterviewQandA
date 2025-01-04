@@ -11,9 +11,9 @@ func main() {
 
 	m := l / 2
 
-	if l%2 != 0 {
-		fmt.Println(arr[m])
-	} else {
+	if l%2 == 0 {
 		fmt.Println(arr[m-1], arr[m])
+	} else {
+		fmt.Println(arr[m])
 	}
 }
