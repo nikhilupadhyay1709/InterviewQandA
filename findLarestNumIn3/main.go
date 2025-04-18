@@ -9,14 +9,16 @@ func main() {
 	b := 25
 	c := 9
 
-	l := a
+	l := max(c, max(b, a))
 
-	if b > l {
-		l = b
-	}
-	if c > l {
-		l = c
-	}
+	// l := a
+
+	// if b > l {
+	// 	l = b
+	// }
+	// if c > l {
+	// 	l = c
+	// }
 
 	fmt.Print(l)
 }
