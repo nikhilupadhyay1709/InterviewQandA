@@ -15,28 +15,13 @@ func findMaxAndMin(arr []int) (int, int) {
 	max := arr[0]
 	min := arr[0]
 
-	for i := 0; i < len(arr); i++ {
+	for i := range arr {
 		if arr[i] > max {
 			max = arr[i]
-		} else if arr[i] < min {
+		} else {
 			min = arr[i]
 		}
 	}
 
 	return max, min
 }
-
-// func findMaxAndMin(arr []int) (int, int) {
-// 	max := arr[0]
-// 	min := arr[0]
-
-// 	for _, v := range arr {
-// 		if v > max {
-// 			max = v
-// 		} else if v < min {
-// 			min = v
-// 		}
-// 	}
-
-// 	return max, min
-// }
