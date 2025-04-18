@@ -7,12 +7,12 @@ import (
 func findSecondMax(arr []int) int {
 	var max, secondMax int
 
-	for _, num := range arr {
-		if num > max {
+	for _, v := range arr {
+		if v > max {
 			secondMax = max
-			max = num   
-		} else if num > secondMax {
-			secondMax = num
+			max = v   
+		} else if v > secondMax {
+			secondMax = v
 		}
 	}
 

@@ -13,7 +13,7 @@ func missingElementsFromArray(arr []int, N int) []int {
 	result := []int{}
 	var diff = arr[0] - 0
 
-	for i := 0; i < N; i++ {
+	for i := range N {
 		if arr[i]-i != diff {
 			for diff < arr[i]-i {
 				result = append(result, i+diff)
