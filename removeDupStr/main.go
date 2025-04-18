@@ -3,14 +3,11 @@ package main
 import "fmt"
 
 func removeDup(str []string) []string {
-
 	m := make(map[string]bool)
-	
 	var res []string
 	
 	for _, v := range str {
-		ok := m[v] 
-		
+		ok := m[v] 		
 		if !ok {
 			m[v] = true
 			res = append(res, v)

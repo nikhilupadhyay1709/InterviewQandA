@@ -2,15 +2,13 @@ package main
 
 import "fmt"
 
-func sumArray(arr []int) int {
+// Function to find the sum of all elements in an array
+func main() {
+	arr := []int{1, 2, 3, 4, 5}
 	sum := 0
 	for _, value := range arr {
 		sum += value
 	}
-	return sum
-}
 
-func main() {
-	arr := []int{1, 2, 3, 4, 5}
-	fmt.Println("Sum of array elements:", sumArray(arr))
+	fmt.Println("Sum of array elements:", sum)
 }
