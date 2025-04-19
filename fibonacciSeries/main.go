@@ -8,7 +8,6 @@ func main() {
 	n := 12
 	t1 := 0
 	t2 := 1
-	tn := 0
 
 	for i := 1; i <= n; i++ {
 		if i == 1 {
@@ -19,7 +18,7 @@ func main() {
 			fmt.Print(" ", t2)
 			continue
 		}
-		tn = t1 + t2
+		tn := t1 + t2
 		t1 = t2
 		t2 = tn
 		fmt.Print(" ", tn)

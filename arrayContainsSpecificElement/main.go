@@ -1,14 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 func contains(arr []int, target int) bool {
-	for _, v := range arr {
-		if v == target {
-			return true
-		}
-	}
-	return false
+	// for _, v := range arr {
+	// 	if v == target {
+	// 		return true
+	// 	}
+	// }
+	// return false
+
+	return slices.Contains(arr, target)
 }
 
 func main() {

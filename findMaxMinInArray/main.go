@@ -18,7 +18,7 @@ func findMaxAndMin(arr []int) (int, int) {
 	for i := range arr {
 		if arr[i] > max {
 			max = arr[i]
-		} else {
+		} else if arr[i] < min {
 			min = arr[i]
 		}
 	}
