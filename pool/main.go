@@ -9,20 +9,19 @@ import (
 func worker(id int, jobs <-chan int, res chan<- int) {
 	for job := range jobs {
 		fmt.Printf("Worker %d is processing job %d\n", id, job)
-		time.Sleep(time.Second) // Simulate work
-		res <- job * 2          // Send result back
+		time.Sleep(time.Second) 
+		res <- job * 2
 	}
 }
 
 func main() {
-	njobs := 5      // Number of tasks
-	numWorkers := 3 // Number of workers
-
+	njobs := 5      
+	nworkers := 3 
 	jobs := make(chan int, njobs) // Task queue
 	res := make(chan int, njobs)  // res queue
 
 	// Start workers
-	for w := 1; w <= numWorkers; w++ {
+	for w := 1; w <= nworkers; w++ {
 		go worker(w, jobs, res)
 	}
 
@@ -30,7 +29,7 @@ func main() {
 	for j := 1; j <= njobs; j++ {
 		jobs <- j
 	}
-	close(jobs) // Close the jobs channel when done sending tasks
+	close(jobs)
 
 	// Collect res
 	for r := 1; r <= njobs; r++ {
