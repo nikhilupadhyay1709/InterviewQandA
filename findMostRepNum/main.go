@@ -5,26 +5,25 @@ import (
 )
 
 func main() {
-	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 2, 1, 12}
-	m := make(map[int]int)
-	maxCount := 0
+	arr := []int{1, 3, 2, 1, 4, 1, 3, 3, 3, 2, 4, 4, 4, 4}
 
-	// Count frequencies and track max count
+	// Map to count occurrences
+	m := make(map[int]int)
+
+	// Count frequencies
 	for _, v := range arr {
 		m[v]++
-		if m[v] > maxCount {
-			maxCount = m[v]
-		}
 	}
 
-	// Collect numbers with the highest frequency
-	mostRep := []int{}
+	// Find most repeated element
+	var mostFrequent int
+	maxCount := 0
 	for v, count := range m {
-		if count == maxCount {
-			mostRep = append(mostRep, v)
+		if count > maxCount {
+			mostFrequent = v
+			maxCount = count
 		}
 	}
 
-	fmt.Printf("Most repeated number(s) 🚀: %v (Count: %d)\n", mostRep, maxCount)
-
+	fmt.Printf("Most repeated element: %d\nCount: %d\n", mostFrequent, maxCount)
 }
