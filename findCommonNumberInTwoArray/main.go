@@ -24,7 +24,7 @@ func anotherWay() {
 	common := make(map[int]bool)
 
 	for _, v := range arr {
-		seen[v] = true
+		seen[v] = true	
 	}
 
 	for _, v := range arr1 {

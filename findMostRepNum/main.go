@@ -16,14 +16,14 @@ func main() {
 	}
 
 	// Find most repeated element
-	var mostFrequent int
+	var mostRep int
 	maxCount := 0
 	for v, count := range m {
 		if count > maxCount {
-			mostFrequent = v
+			mostRep = v
 			maxCount = count
 		}
 	}
 
-	fmt.Printf("Most repeated element: %d\nCount: %d\n", mostFrequent, maxCount)
+	fmt.Printf("Most repeated element: %d\nCount: %d\n", mostRep, maxCount)
 }
