@@ -29,7 +29,7 @@ func bucketSort(array []float64, bucketSize int) []float64 {
 	}
 	nBuckets := int(max-min)/bucketSize + 1
 	buckets := make([][]float64, nBuckets)
-	for i := 0; i < nBuckets; i++ {
+	for i := range nBuckets {
 		buckets[i] = make([]float64, 0)
 	}
 
