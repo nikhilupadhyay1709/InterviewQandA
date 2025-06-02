@@ -1,5 +1,5 @@
 # InterviewQandA
-All Interview Questions IN Go
+All Interview Questions In Go
 
 
 -- 
