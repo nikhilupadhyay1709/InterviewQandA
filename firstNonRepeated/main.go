@@ -10,17 +10,17 @@ func main() {
 	fmt.Println("FirstNonRepeatingCharacter", res)
 }
 
-func FirstNonRepeatingCharacter(str string) int {
-	m := map[string]int{}
+func FirstNonRepeatingCharacter(str string) string {
+	m := make(map[rune]int)
 
 	for _, v := range str {
-		m[string(v)] += 1
+		m[v]++
 	}
 
-	for i, v := range str {
-		if m[string(v)] == 1 {
-			return i
+	for _, v := range str {
+		if m[v] == 1 {
+			return string(v)
 		}
 	}
-	return -1
+	return ""
 }
