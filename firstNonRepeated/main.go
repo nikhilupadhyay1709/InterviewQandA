@@ -11,7 +11,7 @@ func main() {
 }
 
 func NonRepeatingChar(str string) string {
-	m := make(map[rune]int)
+	m := make(map[int32]int)
 
 	for _, v := range str {
 		m[v]++
