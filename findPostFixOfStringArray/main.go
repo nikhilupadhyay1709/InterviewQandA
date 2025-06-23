@@ -9,10 +9,7 @@ func commonPostfix(input []string) string {
 	postfix := input[0]
 
 	for _, str := range input[1:] {
-		minLength := len(postfix)
-		if len(str) < minLength {
-			minLength = len(str)
-		}
+		minLength := min(len(str), len(postfix))
 
 		for i := 1; i <= minLength; i++ {
 			if postfix[len(postfix)-i] != str[len(str)-i] {
