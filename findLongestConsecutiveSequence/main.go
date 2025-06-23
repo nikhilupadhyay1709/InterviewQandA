@@ -5,17 +5,14 @@ import (
 )
 
 func findLongestConsecutiveSequence(arr []int) ([]int, int) {
-	if len(arr) == 0 {
-		return []int{}, 0
-	}
-
+	var longestSequence []int
 	numMap := make(map[int]bool)
+	
+	longestStreak := 0
+
 	for _, num := range arr {
 		numMap[num] = true
 	}
-
-	longestStreak := 0
-	var longestSequence []int
 
 	for _, num := range arr {
 		if !numMap[num-1] {
