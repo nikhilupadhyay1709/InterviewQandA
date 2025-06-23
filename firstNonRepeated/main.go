@@ -5,12 +5,12 @@ package main
 import "fmt"
 
 func main() {
-	str := "ikhil"
-	res := FirstNonRepeatingCharacter(str)
+	str := "i am Nikhil"
+	res := NonRepeatingChar(str)
 	fmt.Println("FirstNonRepeatingCharacter", res)
 }
 
-func FirstNonRepeatingCharacter(str string) string {
+func NonRepeatingChar(str string) string {
 	m := make(map[rune]int)
 
 	for _, v := range str {
