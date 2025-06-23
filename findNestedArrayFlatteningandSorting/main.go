@@ -8,11 +8,11 @@ import (
 // Nested Array Flattening and Sorting
 
 // Function to flatten a nested array
-func flatten(input interface{}) []float64 {
+func flatten(input any) []float64 {
 	var flat []float64
 
 	switch v := input.(type) {
-	case []interface{}:
+	case []any:
 		for _, item := range v {
 			flat = append(flat, flatten(item)...)
 		}
@@ -28,7 +28,7 @@ func flatten(input interface{}) []float64 {
 }
 
 // Function to sort the flattened array
-func sortNestedArray(nestedArray []interface{}) []float64 {
+func sortNestedArray(nestedArray []any) []float64 {
 	// Flatten the nested array
 	flatArray := flatten(nestedArray)
 
@@ -40,8 +40,8 @@ func sortNestedArray(nestedArray []interface{}) []float64 {
 
 func main() {
 	// Example nested array
-	nestedArray := []interface{}{
-		4.0, 1.0, []interface{}{1.0, 3.0}, 2.0, []interface{}{2.0, 7.0, []interface{}{-6.0, 0.0}},
+	nestedArray := []any{
+		4.0, 1.0, []any{1.0, 3.0}, 2.0, []any{2.0, 7.0, []any{-6.0, 0.0}},
 	}
 
 	// Print the nested array before sorting
