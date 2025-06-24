@@ -11,7 +11,7 @@ func isPalindrome(n int) bool {
 	l := len(str)
 
 	// Compare the string with its reverse
-	for i := 0; i < l/2; i++ {
+	for i := range l / 2 {
 		if str[i] != str[l-1-i] {
 			return false
 		}

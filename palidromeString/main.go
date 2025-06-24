@@ -5,15 +5,17 @@ import "fmt"
 func main() {
 	str := "NITIN"
 	str = "Nikhil"
-	fmt.Println("Is Palindrome 🚀:", IsPalindrome(str))
+	fmt.Println("Is Palindrome 🚀:", Palindrome(str))
 }
 
-func IsPalindrome(str string) bool {
-	res := []byte{}
+func Palindrome(str string) bool {
+	l := len(str)
 
-	for i := len(str) - 1; i >= 0; i-- {
-		res = append(res, str[i])
+	for i := range l / 2 {
+		if str[i] != str[l-1-i] {
+			return false
+		}
 	}
 
-	return str == string(res)
+	return true
 }
