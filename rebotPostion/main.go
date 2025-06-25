@@ -16,10 +16,11 @@ func findFinalPosition(commands string) int {
 	dir := 1      // 1 for forward, -1 for backward
 
 	for _, cmd := range commands {
-		if cmd == 'R' {
+		switch cmd {
+		case 'R':
 			dir *= -1
 			vel = 1
-		} else if cmd == 'A' {
+		case 'A':
 			position += dir * vel
 			vel *= 2
 		}
