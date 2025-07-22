@@ -23,9 +23,9 @@ func sum(arr []int) int {
 
 func getNumsInString(s string) []int {
 	var arr []int
-	for _, c := range s {
-		if c >= '0' && c <= '9' {
-			arr = append(arr, int(c-'0'))
+	for _, v := range s {
+		if v >= '0' && v <= '9' {
+			arr = append(arr, int(v-'0'))
 		}
 	}
 	return arr
