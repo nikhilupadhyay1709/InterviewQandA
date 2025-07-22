@@ -12,11 +12,11 @@ func main() {
 
 func maxSubArray(arr []int) int {
 	maxSum := arr[0]
-	currentSum := arr[0]
+	sum := arr[0]
 
-	for i := 1; i < len(arr); i++ {
-		currentSum = max(arr[i], currentSum+arr[i])
-		maxSum = max(maxSum, currentSum)
+	for i := range len(arr) {
+		sum = max(arr[i], sum+arr[i])
+		maxSum = max(maxSum, sum)
 	}
 
 	return maxSum
