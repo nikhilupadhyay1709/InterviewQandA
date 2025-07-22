@@ -22,11 +22,11 @@ func sum(arr []int) int {
 }
 
 func getNumsInString(s string) []int {
-	var nums []int
+	var arr []int
 	for _, c := range s {
 		if c >= '0' && c <= '9' {
-			nums = append(nums, int(c-'0'))
+			arr = append(arr, int(c-'0'))
 		}
 	}
-	return nums
+	return arr
 }
