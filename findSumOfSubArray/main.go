@@ -11,8 +11,8 @@ func main() {
 }
 
 func maxSubArray(arr []int) int {
-	maxSum := arr[0]
 	sum := arr[0]
+	maxSum := arr[0]
 
 	for i := range len(arr) {
 		sum = max(arr[i], sum+arr[i])
