@@ -24,9 +24,10 @@ func main() {
 
 func findStartToEndLocation(routes []Position, start string) []string {
 	// Create a map from start to end
-	routeMap := make(map[string]string)
+	m := make(map[string]string)
+	
 	for _, pos := range routes {
-		routeMap[pos.Start] = pos.End
+		m[pos.Start] = pos.End
 	}
 
 	var path []string
@@ -34,7 +35,7 @@ func findStartToEndLocation(routes []Position, start string) []string {
 
 	for {
 		path = append(path, current)
-		next, exists := routeMap[current]
+		next, exists := m[current]
 		if !exists || next == start {
 			// Either route ends or comes back to start
 			if exists {
