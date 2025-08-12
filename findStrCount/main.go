@@ -3,14 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	str := "Nikhil"
+	str := "Golang is fast and Golang is powerful"
 
 	freq := make(map[string]int)
 
-	for _, char := range str {
-		freq[string(char)] = freq[string(char)] + 1
-
+	for _, v := range str {
+		if v == ' ' {
+			continue
+		}
+		freq[string(v)] = freq[string(v)] + 1
 	}
 
-	fmt.Println("String Count:", freq)
+	fmt.Println("Word frequencies:", freq)
 }
