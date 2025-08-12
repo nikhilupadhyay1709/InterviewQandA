@@ -4,15 +4,15 @@ import (
 	"fmt"
 )
 
-func firstNonRepeating(nums []int) int {
+func firstNonRepeating(arr []int) int {
 	m := make(map[int]int)
-	for _, num := range nums {
-		m[num]++
+	for _, v := range arr {
+		m[v]++
 	}
 
-	for _, num := range nums {
-		if m[num] == 1 {
-			return num
+	for _, v := range arr {
+		if m[v] == 1 {
+			return v
 		}
 	}
 
