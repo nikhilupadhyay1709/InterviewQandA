@@ -28,13 +28,6 @@ func merge(intervals [][]int) [][]int {
 	return merged
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func main() {
 	intervals := [][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}}
 	fmt.Println("Merged intervals:", merge(intervals))
