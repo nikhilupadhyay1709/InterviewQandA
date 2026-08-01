@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func appendCategory(a []string, b []string) []string {
+func appendCategory(a, b []string) []string {
 
 	m := make(map[string]int)
 	d := append(a, b...)
@@ -25,5 +25,5 @@ func main() {
 	b := []string{"x", "p", "q"}
 	c := appendCategory(a, b)
 	fmt.Println(c)
- 
+
 }
