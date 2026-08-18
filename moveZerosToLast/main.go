@@ -3,20 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	arr := []int{0, 1, 0, 3, 12}
-
-	// Move all zeros to the end of the array
+	arr := []int{1, 2, 3, 4, 0, 2, 4, 8, 0, 9, 4, 0, 5}
 	pos := 0
-	for _, v := range arr {
+
+	for i, v := range arr {
 		if v != 0 {
-			arr[pos] = v
+			arr[pos], arr[i] = arr[i], arr[pos]
 			pos++
 		}
 	}
-	for pos < len(arr) {
-		arr[pos] = 0
-		pos++
-	}
 
-	fmt.Println(arr) // Output: [1 3 12 0 0]
+	fmt.Println(arr)
 }

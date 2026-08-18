@@ -28,7 +28,7 @@ func main() {
 		defer wg.Done()
 		for num < 10 {
 			mu.Lock()
-			if num%2 == 0 {
+			if num%2 == 0 {	
 				fmt.Print(num, ",")
 				num++
 			}
